@@ -1,0 +1,18 @@
+= Schematics
+
+Schematics are definitions for Ada dependencies, these are meant to be
+processed by the Difference Engineer (`de`) to bring dependencies in for Ada
+projects.
+
+
+== Envirnoment Variables
+
+When performing source builds of schematics, the following environment
+variables must be defined:
+
+
+SCHEMATIC_INSTALL_PREFIX:: Absolute path to where schematics should be
+installed.
+SCHEMATIC_PARALLELISM:: Number of cores or desired parallelism to execute
+various tasks with. More often than not this should be analogous to the `-j`
+argument passed to `make(1)`.

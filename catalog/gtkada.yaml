@@ -1,0 +1,14 @@
+---
+name: gtkada
+source:
+  url: https://github.com/AdaCore/gtkada.git
+  scm: git
+  ref: master
+prepare:
+  - "./configure --prefix=${SCHEMATIC_INSTALL_PREFIX}"
+build:
+  - "make -j${SCHEMATIC_PARALLELISM}"
+install:
+  - "make install"
+
+# vim: ts=2 sw=2 et
