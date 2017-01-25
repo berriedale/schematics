@@ -5,7 +5,7 @@ source:
   scm: git
   ref: master
 schematics:
-  - xmlada
+  - adacore/xmlada
 requirements:
 prepare:
   - "echo 'prefix = ${SCHEMATIC_INSTALL_PREFIX}' >> makefile.setup"
