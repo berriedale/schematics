@@ -1,7 +1,7 @@
 = Schematics
 
 Schematics are definitions for Ada dependencies, these are meant to be
-processed by the Difference Engineer (`de`) to bring dependencies in for Ada
+processed by the Analytical Engine (`ae`) to bring dependencies in for Ada
 projects.
 
 
