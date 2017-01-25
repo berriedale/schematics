@@ -4,8 +4,15 @@ source:
   url: https://github.com/AdaCore/gtkada.git
   scm: git
   ref: master
+schematics:
+requirements:
+  linux:
+    checks:
+      -
+        command: "pkg-config --exists gtk+-3.0"
+        helptext: "Gtk+ 3.0 could not be found"
 prepare:
-  - "./configure --prefix=${SCHEMATIC_INSTALL_PREFIX}"
+  - "./configure --prefix=${SCHEMATIC_INSTALL_PREFIX} --disable-static-pic"
 build:
   - "make -j${SCHEMATIC_PARALLELISM}"
 install:
