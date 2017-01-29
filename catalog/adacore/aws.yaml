@@ -9,6 +9,7 @@ schematics:
 requirements:
 prepare:
   - "echo 'prefix = ${SCHEMATIC_INSTALL_PREFIX}' >> makefile.setup"
+  - 'git submodule update --init'
   - "make setup"
 build:
   - "make build"
