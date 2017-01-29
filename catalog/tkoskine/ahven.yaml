@@ -2,12 +2,17 @@
 name: ahven
 source:
   url: http://www.ahven-framework.com
+  scm: file
   versions:
-    2.6:
+    -
+      version: 2.6
       url: 'http://www.ahven-framework.com/releases/ahven-2.6.tar.gz'
+      filename: ahven-2.6.tar.gz
       sha256: '9ad43885c333c1d93cb106dbf8f361bac33b793d9892930a540eebdf23c1c4a5'
-    2.5:
+    -
+      version: 2.5
       url: 'http://www.ahven-framework.com/releases/ahven-2.5.tar.gz'
+      filename: ahven-2.5.tar.gz
       sha256: 'bcdd9f94af40fd570a725f7e86e61dcdff574ec67f7e1aca7c522f1549567fd5'
 schematics:
 requirements:
@@ -16,6 +21,6 @@ prepare:
 build:
   - "make -j${SCHEMATIC_PARALLELISM}"
 install:
-  - "make install"
+  - "DESTDIR=${SCHEMATIC_INSTALL_PREFIX} make install"
 
 # vim: ts=2 sw=2 et

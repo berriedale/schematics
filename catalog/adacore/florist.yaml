@@ -1,0 +1,21 @@
+---
+name: florist
+source:
+  url: http://libre.adacore.com
+  scm: file
+  versions:
+    -
+      version: 2016
+      filename: 'florist-gpl-2016-src.tar.gz'
+      url: 'http://mirrors.cdn.adacore.com/art/57399229c7a447658e0aff79'
+      sha256: 7b714fe7bf78749998466418f5666ffc6cfadc12;
+schematics:
+requirements:
+prepare:
+  - "./configure --prefix=${SCHEMATIC_INSTALL_PREFIX}"
+build:
+  - "make -j${SCHEMATIC_PARALLELISM}"
+install:
+  - "make install"
+
+# vim: ts=2 sw=2 et
